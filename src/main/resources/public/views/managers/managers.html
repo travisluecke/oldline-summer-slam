@@ -1,0 +1,28 @@
+<div ng-init="managers">
+    <table id="managers" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Account Number</th>                                
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>   
+                <th>Address</th>
+                <th>Account Number</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr ng-repeat="manager in managers">
+                <td>{{ manager._id }}</td>
+                <td>{{ manager.name }} </td>
+                <td>{{ manager.address }} </td>
+                <td>{{ manager.accountNumber }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

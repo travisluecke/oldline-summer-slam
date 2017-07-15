@@ -1,0 +1,37 @@
+<div class="modal-header">
+    <h3>Create A New Project!</h3>
+</div>
+<form name="form.projectForm" ng-submit="submitForm()" novalidate>
+    <div class="modal-body">
+        <!-- NAME -->
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" ng-model="name" required>
+            <p ng-show="form.projectForm.name.$invalid && !form.projectForm.name.$pristine" class="help-block">Project name is required.</p>
+        </div>
+
+		<!-- project.addProperty("_id","123456789");  -->
+		<!-- project.addProperty("name","project one"); -->
+		<!-- project.addProperty("address","1234 Defense Hwy, Crofton MD, 21114"); -->
+		<!-- project.addProperty("authId","912345678"); -->
+		<!-- project.add("vendors",vendorIds); -->
+		<!-- project.add("contractors",genConIds); -->
+		
+        <!-- Address -->
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" name="address" class="form-control" ng-model="project.address" required>
+        </div>
+
+        <!-- Owner -->
+        <div class="form-group">
+            <label>Project Owner</label>
+            <input type="text" name="authId" class="form-control" ng-model="project.authId" required>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-disabled="form.projectForm.$invalid">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</form>
