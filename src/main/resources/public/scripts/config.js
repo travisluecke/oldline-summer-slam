@@ -7,7 +7,7 @@
 function configState($stateProvider, $urlRouterProvider, $compileProvider) {
 
     // Optimize load start with remove binding information inside the DOM element
-    $compileProvider.debugInfoEnabled(true);
+    //$compileProvider.debugInfoEnabled(true);
 
     // Set default state
     
